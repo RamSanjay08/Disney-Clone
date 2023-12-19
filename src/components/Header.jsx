@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../assets/Disney-Plus-Logo.png";
-import { HiHome, HiStar } from "react-icons/hi";
+import { HiHome, HiStar, HiDotsVertical } from "react-icons/hi";
 import { PiFilmReelFill } from "react-icons/pi";
 import { IoMdAddCircle } from "react-icons/io";
 import { FaMagnifyingGlass } from "react-icons/fa6";
@@ -45,16 +45,23 @@ const Header = () => {
   return (
     <div className="flex items-center justify-between p-5">
       <div className="flex gap-8 items-center ">
-      <img
-        src={Logo}
-        alt="Disney"
-        className="w-[80px] md:w-[100px] object-cover "
-      />
-      {menu.map(({ id, title, icon }) => {
-        return <HeaderItems id={id} title={title} Icon={icon} key={id} />;
-      })}
+        <img
+          src={Logo}
+          alt="Disney"
+          className="w-[80px] md:w-[100px] object-cover "
+        />
+        <div className="hidden md:flex gap-8">
+          {menu.map(({ id, title, icon }) => {
+            return <HeaderItems id={id} title={title} Icon={icon} key={id} />;
+          })}
+        </div>
+        <div className="flex md:hidden gap-8">
+          {menu.map(({ id, title, icon },index) =>{
+            return index < 3 &&  <HeaderItems id={id} title={title} Icon={icon} key={id} />;
+          })}
+        </div>
       </div>
-      <img src={ProfileIcon} alt="" className="w-[45px] rounded-full"/>
+      <img src={ProfileIcon} alt="" className="w-[45px] rounded-full" />
     </div>
   );
 };
