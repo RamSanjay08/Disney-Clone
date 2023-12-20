@@ -16,14 +16,10 @@ const Slider = () => {
     })
   }
 
-
   return (
-    <div> 
+    <div className='flex overflow-x-auto px-16 py-4 w-full scrollbar-none'> 
       {movieList.map((item,index) => (
-       <div key={index}>
-       <h1>{item.title}</h1>
-        <img src={IMAGE_BASE_URL + item.backdrop_path} alt="" className='min-w-full h-[400px] object-cover'/>
-       </div>
+        <img src={IMAGE_BASE_URL + item.backdrop_path} alt="" className='min-w-full h-[310px] object-cover object-left-top mr-5 rounded-md' key={index}/>
       ))}
     </div>
   )
