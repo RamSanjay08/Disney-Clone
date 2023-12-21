@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Logo from "../assets/Disney-Plus-Logo.png";
+import Logo from "../assets/images/logo.png";
 import { HiHome, HiStar, HiDotsVertical } from "react-icons/hi";
 import { PiFilmReelFill } from "react-icons/pi";
 import { IoMdAddCircle } from "react-icons/io";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { PiTelevisionBold } from "react-icons/pi";
 import HeaderItems from "./HeaderItems";
-import ProfileIcon from "../assets/8TysGUZ0I12C6YWxZUdhVfEus.webp";
+import ProfileIcon from "../assets/images/8TysGUZ0I12C6YWxZUdhVfEus.webp";
 
 const Header = () => {
 
