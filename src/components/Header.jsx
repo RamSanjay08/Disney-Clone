@@ -51,7 +51,7 @@ const Header = () => {
         <img
           src={Logo}
           alt="Disney"
-          className="w-[80px] md:w-[100px] object-cover"
+          className="w-[80px] md:w-[120px] object-cover"
         />
         <div className="hidden md:flex gap-8">
           {menu.map(({ id, title, icon }) => (

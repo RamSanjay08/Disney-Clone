@@ -29,7 +29,7 @@ const MovieList = ({genreId,index_}) => {
 
   return (
     <div className='relative'>
-        <IoIosArrowBack className={`hidden md:block absolute text-white text-[50px] p-2 z-10 mt-[150px] cursor-pointer`} onClick={()=>sliderLeft(elementRef.current)}/>
+        <IoIosArrowBack className={`hidden md:block absolute text-white text-[50px] p-2 z-10 ${index_ % 3 == 0 ? 'mt-[75px]' : 'mt-[150px]'} cursor-pointer`} onClick={()=>sliderLeft(elementRef.current)}/>
     <div ref={elementRef} className='flex gap-8 overflow-x-auto scrollbar-none scroll-smooth py-5 px-3' >
       {movieList.map((item,index) => (
         <>
@@ -37,7 +37,7 @@ const MovieList = ({genreId,index_}) => {
         </>
         ))}
     </div>
-        <IoIosArrowForward className='hidden md:block absolute text-white text-[50px] mt-[150px] z-10 cursor-pointer right-0 top-0 p-2' onClick={()=>sliderRight(elementRef.current)}/>
+        <IoIosArrowForward className={`hidden md:block absolute text-white text-[50px] ${index_ % 3 == 0 ? 'mt-[px]' : 'mt-[150px]'} z-10 cursor-pointer right-0 top-0 p-2`} onClick={()=>sliderRight(elementRef.current)}/>
     </div>
   )
 }

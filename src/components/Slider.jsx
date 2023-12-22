@@ -32,7 +32,7 @@ const Slider = () => {
       <IoIosArrowForward className='hidden md:block absolute text-white text-[30px] mx-8 mt-[150px] cursor-pointer right-0' onClick={()=>sliderRight(elementRef.current)}/>
     <div className='flex overflow-x-auto px-16 py-4 w-full scrollbar-none scroll-smooth' ref={elementRef}> 
       {movieList.map((item,index) => (
-        <img src={IMAGE_BASE_URL + item.backdrop_path} alt="" className='min-w-full md:h-[310px] object-cover object-left-center mr-5 rounded-md hover:border-[4px] border-gray-400 transition-all duration-100 ease-in' key={index}/>
+        <img src={IMAGE_BASE_URL + item.backdrop_path} alt="" className='min-w-full md:h-[420px] object-cover object-left-top mr-5 rounded-md hover:border-[4px] border-gray-400 transition-all duration-100 ease-in' key={index}/>
       ))}
     </div>
     </div>
